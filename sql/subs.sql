@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `subs` (
+   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   enabled BOOLEAN DEFAULT 1,
+   alias VARCHAR(16),
+   event VARCHAR(32) DEFAULT "presence.update",
+   phone VARCHAR(15) NOT NULL,
+   tag VARCHAR(8),
+   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
