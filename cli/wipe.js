@@ -7,7 +7,7 @@ import { goCommand } from './go.js';
 const cmd = new Command('wipe');
 
 (function () {
-   cmd.version('1.1.0', '-v, --version');
+   cmd.version('1.1.1', '-v, --version');
    cmd.description('Liteweight tool to track presence on WhatsApp');
 
    cmd.addCommand(goCommand);
