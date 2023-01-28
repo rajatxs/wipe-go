@@ -9,6 +9,10 @@ export function getTag() {
    return buff.toString('hex').slice(0, 8);
 }
 
+/**
+ * Returns serialized string and params to prepare SQL query
+ * @param {object} o 
+ */
 export function serializeObject(o = {}) {
    const queryTemplate = Object.keys(o)
       .map((key) => `${key}=?`)
