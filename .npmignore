@@ -1,0 +1,8 @@
+temp
+jsconfig.json
+.wipe-session
+.prettierrc
+
+*.log
+*.zip
+.wipe.db
