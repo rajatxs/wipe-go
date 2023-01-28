@@ -16,7 +16,7 @@ export function sqlite() {
 export async function connect() {
    /** @type {SQLite.ISqlite.Config} */
    const config = {
-      filename: path.resolve(SQLITE_DIR, "wipe.db"),
+      filename: SQLITE_DIR,
       driver: SQLite3.Database,
    };
 
