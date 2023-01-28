@@ -3,7 +3,9 @@
       "allowJs": true,
       "checkJs": true,
       "target": "ESNext",
-      "moduleResolution": "Node",
+      "module": "node16",
+      "moduleResolution": "node16",
+      "resolveJsonModule": true,
       "alwaysStrict": false,
       "strict": false,
       "types": ["index.d.ts"]
