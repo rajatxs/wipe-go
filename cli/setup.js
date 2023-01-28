@@ -2,6 +2,7 @@ import { Command } from 'commander';
 import path from 'path';
 import logger from '../utils/logger.js';
 import { connect, readAndExecuteQuery, disconnect } from '../utils/sqlite.js';
+import { fileURLToPath } from 'url';
 
 const setupCommand = new Command('setup');
 
@@ -13,7 +14,12 @@ const setupCommand = new Command('setup');
          await connect();
 
          for (let file of files) {
-            const queryPath = path.join('sql', file + '.sql');
+            const dir = path.join(
+               path.dirname(fileURLToPath(import.meta.url)),
+               '..',
+               'sql'
+            );
+            const queryPath = path.join(dir, file + '.sql');
             await readAndExecuteQuery(queryPath);
          }
 
