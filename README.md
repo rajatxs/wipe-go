@@ -1,4 +1,4 @@
-# Wipe Go
+# Wipe Go 🚀
 Wipe Go is a liteweight user's presence tracker for WhatsApp.
 
 ## Requirements
@@ -28,7 +28,7 @@ add **.env** file with following variables
 NODE_ENV = "development"
 
 # wa session config
-SESSION_ROOT = "./"
+WIPE_SESSION_ROOT = "./"
 
 # database configuration
 WIPE_SQLITE_DIR = "./"
