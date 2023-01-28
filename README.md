@@ -1,4 +1,4 @@
-# Wipe Go
+# Wipe Go 🚀
 Wipe Go is a liteweight user's presence tracker for WhatsApp.
 
 ## Requirements
