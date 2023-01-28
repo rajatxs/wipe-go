@@ -5,74 +5,30 @@ Wipe Go is a liteweight user's presence tracker for WhatsApp.
 You only need to install [Node 12](https://nodejs.org).
 
 ## Install
-You need to clone this repository and navigate into that directory
+You need to run following command to install `wipe` tool globally:
 ```sh
-git clone https://github.com/rajatxs/wipe-go.git wipe-go
-```
-```sh
-cd wipe-go
+npm i -g @rxpm/wipe
 ```
 
-then install required dependencies using your favourite package manager
+Once it's done, you can verify it using 
 ```sh
-npm install
-```
-or
-```sh
-yarn install
+wipe -v
 ```
 
-add **.env** file with following variables
-```markdown
-# nodejs environment either "production" or "development"
-NODE_ENV = "development"
-
-# wa session config
-WIPE_SESSION_ROOT = "./"
-
-# database configuration
-WIPE_SQLITE_DIR = "./"
-```
-
-finally you need to run SQL queries to setup tables in the database
-> You can run those queries manually or using built in command
-
+Initially you need to run setup script to perform database migration
 ```sh
-npm run query subs pres_hist
-```
-or 
-```sh
-yarn query subs pres_hist
-```
-
-add one subscription into database using
-```sh
-npm run subs:add <user name> <your target phone>
-```
-or
-```sh
-yarn subs:add <user name> <your target phone>
+wipe setup
 ```
 
 ## Usage
-Once you complete the setup you can run the following command to start WA Socket service
-
-If you did setup the environment globally then you can run 
+To add new subscription
 ```sh
-npm start
-```
-or
-```sh
-yarn start
+wipe subs add --alias <add alias here> --phone <phone number> 
 ```
 
-otherwise you can load .env file using 
+Now use this command to start core service
 ```sh
-npm run start:env
-```
-or
-```sh
-yarn start:env
+wipe go
 ```
 
 > For the first time, you need to connect your WhatsApp by scanning a QR code from the terminal
